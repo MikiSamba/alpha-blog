@@ -6,7 +6,7 @@
     <tr>
         <th>Title</th>
         <th>Description</th>
-        <th>Actions</th>
+        <th colspan = "3">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -14,8 +14,12 @@
         <tr>
             <td><%= article.title%> </td>
             <td> <%= article.description%> </td>
-            <td>Placeholder</td>
+            <td> <%= link_to "Show", article_path(article.id) %> </td>
+            <td> <%= link_to "Edit", edit_article_path(article.id) %></td>
+            <td> <%= button_to "Delete", article_path(article.id), method: :delete, onclick: "return confirm('Sei sicuro di eliminare?');" %> </td>
+
         </tr>
         <% end %>
     </tbody>
-</table>
+</table> <br>
+<td> <%= link_to "Create New Article", new_article_path %> </td>

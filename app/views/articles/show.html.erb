@@ -1,3 +1,9 @@
 <h1>Showing articles details</h1>
 <p><strong>Title: </strong>   <%= @article.title %>    </p>
 <p><strong>Description: </strong>  <%= @article.description %>    </p>
+
+<%= link_to "Return To Index", articles_path %> |
+<%= link_to "Edit", edit_article_path(@article.id) %> <br><br>
+<%= button_to "Delete", article_path(@article.id), method: :delete, onclick: "return confirm('Sei sicuro di eliminare?');" %> 
+
+           
