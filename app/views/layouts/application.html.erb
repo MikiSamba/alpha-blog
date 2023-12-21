@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!--questo si riferisce al file application.css-->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+     <!--#si riferisce all'importmap.rb-->
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    
+
     <%= render "layouts/messages", status: :unprocessable_entity%>
     <%= yield %>
   </body>
