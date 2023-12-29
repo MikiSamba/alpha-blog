@@ -1,0 +1,61 @@
+.navbar {
+    background-color:darkcyan ;
+}
+
+.navbar-brand{
+    color:black
+}
+
+.nav-item a {
+    color:black /* Puoi sostituire "red" con qualsiasi altro colore desiderato */
+}
+
+.dropdown-menu {
+    background-color:darkcyan ;
+}
+.navbar-brand{
+    float: left;
+    font-size: 1.7em;
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.container-home{
+    background-image: url("concerto.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.text-body-emphasis{
+    font-size: 4em;
+    color:black;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    font-weight: bold;
+    position: fixed;
+    left: 0;
+    bottom: 0;r;
+}
+
+.footer-basic{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:black;
+    background-color:darkcyan ;
+    
+    text-align:center;
+    height:75px;
+}
+
+.list-inline-item{
+    color: black;
+    background-color: transparent;
+    text-decoration: none
+}
+

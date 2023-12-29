@@ -1,9 +1,26 @@
-<h1>Showing articles details</h1>
-<p><strong>Title: </strong>   <%= @article.title %>    </p>
-<p><strong>Description: </strong>  <%= @article.description %>    </p>
+<h1 class= "text-center mt-4">Article showing page</h1>
 
-<%= link_to "Return To Index", articles_path %> |
-<%= link_to "Edit", edit_article_path(@article.id) %> <br><br>
-<%= button_to "Delete", article_path(@article.id), method: :delete, onclick: "return confirm('Sei sicuro di eliminare?');" %> 
-
-           
+<%# --------------------------------------------------------------------------------------- %>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-8 mt-4 ">
+            <div class="card text-center">
+                <div class="card-header">
+                    Article
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%=@article.title%></h5>
+                    <p class="card-text"><%=simple_format(@article.description)%></p>
+                    
+                    
+                    <td><%= link_to "Edit", edit_article_path(@article.id), class:"btn btn-info" %></td>
+                    <td><%= link_to "Delete", article_path(@article.id), method: :delete, onclick: "return confirm('Sei sicuro di eliminare?');" , class:"btn btn-danger" %></td>
+                </div>
+                
+                <div class="card-footer text-muted">
+                    <small>Created <%= @article.created_at %> ago, edited <%=@article.updated_at %> ago </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
